@@ -18,31 +18,30 @@
               <!-- ログイン後のBooksリンクは未実装です。自分で調べて実装してみましょう -->
             </li>
             <li>
-               <!-- ログイン後のLog outリンクは未実装です。自分で調べて実装してみましょう -->
+               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
             </li>
           <% else %>
             <li>
               <%= link_to root_path, class:"nav-link text-light" do%>
-	             <i class="fa-solid fa-house"></i> Home
-	            <% end %>
-	           </li>
-	           <li>
-	            <%= link_to about_path, class:"nav-link text-light" do %>
-	             <i class="fa-solid fa-link"></i> About
-	            <% end %>
-	           </li>
-	           <li>
-	            <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
-	             <i class="fa-solid fa-user-plus"></i>
-	             Sign up
-	            <% end %>
-	           </li>
-	           <li>
-	            <%= link_to new_user_session_path, class:"nav-link text-light" do %>
-	             <i class="fa-solid fa-right-to-bracket"></i>
-	             Log in
-	            <% end %>
-
+               <i class="fa-solid fa-house"></i> Home
+              <% end %>
+            </li>
+            <li>
+              <%= link_to about_path, class:"nav-link text-light" do %>
+               <i class="fa-solid fa-link"></i> About
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
+               <i class="fa-solid fa-user-plus"></i>
+               Sign up
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_session_path, class:"nav-link text-light" do %>
+               <i class="fa-solid fa-right-to-bracket"></i>
+               Log in
+              <% end %>
             </li>
           <% end %>
         </ul>
