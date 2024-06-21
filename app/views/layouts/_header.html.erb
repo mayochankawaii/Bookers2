@@ -1,4 +1,3 @@
-# app/views/layouts/_header.html.erbを変更
 <header>
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
      <div class="container">
@@ -28,18 +27,18 @@
 	            <% end %>
 	           </li>
 	           <li>
-	            <%= link_to 'https://bookers-level2.herokuapp.com', class:"nav-link text-light" do %>
+	            <%= link_to about_path, class:"nav-link text-light" do %>
 	             <i class="fa-solid fa-link"></i> About
 	            <% end %>
 	           </li>
 	           <li>
-	            <%= link_to 'https://bookers-level2.herokuapp.com', class:"nav-link text-light" do %>
+	            <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
 	             <i class="fa-solid fa-user-plus"></i>
 	             Sign up
 	            <% end %>
 	           </li>
 	           <li>
-	            <%= link_to 'https://bookers-level2.herokuapp.com', class:"nav-link text-light" do %>
+	            <%= link_to new_user_session_path, class:"nav-link text-light" do %>
 	             <i class="fa-solid fa-right-to-bracket"></i>
 	             Log in
 	            <% end %>
