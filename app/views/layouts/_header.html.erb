@@ -9,7 +9,7 @@
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
             <li>
-               <!-- ログイン後のHomeリンクは未実装です。自分で調べて実装してみましょう -->
+               <%= link_to "Home", user_path(current_user), method: :delete %>
             </li>
             <li>
                <!-- ログイン後のUsersリンクは未実装です。自分で調べて実装してみましょう -->
