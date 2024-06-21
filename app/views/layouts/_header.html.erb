@@ -9,16 +9,26 @@
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
             <li>
-               <%= link_to "Home", user_path(current_user), method: :delete %>
+              <%= link_to root_path, class:"nav-link text-light" do%>
+               <i class="fa-solid fa-house"></i> Home
+              <% end %>
             </li>
             <li>
-               <!-- ログイン後のUsersリンクは未実装です。自分で調べて実装してみましょう -->
+              <!-- ログイン後のUsersリンクは未実装です。自分で調べて実装してみましょう -->
+               <%= link_to root_path, class:"nav-link text-light" do%>
+               <i class="fa-solid fa-users"></i> Users
+              <% end %>
             </li>
             <li>
               <!-- ログイン後のBooksリンクは未実装です。自分で調べて実装してみましょう -->
+              <%= link_to root_path, class:"nav-link text-light" do%>
+               <i class="fa-solid fa-book-open"></i> Books
+              <% end %>
             </li>
             <li>
-               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+               <%= link_to destroy_user_session_path, class:"nav-link text-light" do%>
+               <i class="fa-solid fa-right-to-bracket"></i> Log out
+              <% end %>
             </li>
           <% else %>
             <li>
@@ -33,14 +43,12 @@
             </li>
             <li>
               <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
-               <i class="fa-solid fa-user-plus"></i>
-               Sign up
+               <i class="fa-solid fa-user-plus"></i> Sign up
               <% end %>
             </li>
             <li>
               <%= link_to new_user_session_path, class:"nav-link text-light" do %>
-               <i class="fa-solid fa-right-to-bracket"></i>
-               Log in
+               <i class="fa-solid fa-right-to-bracket"></i> Log in
               <% end %>
             </li>
           <% end %>
