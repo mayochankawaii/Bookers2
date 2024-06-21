@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  has_one_attached :image
   
   def new
     @user = User.new
