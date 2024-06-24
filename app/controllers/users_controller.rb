@@ -8,13 +8,15 @@ class UsersController < ApplicationController
     @user = User.new(post_image_params)
     @user.user_id = current_user.id
     @user.save
-    redirect_to post_images_path
+    flash[:notice] = "You have created book successfully."
+    redirect_to books_path(@book.id)
   end
   
   def index
   end
 
   def show
+    @book = Book.new
   end
 
   def edit
@@ -27,8 +29,8 @@ class UsersController < ApplicationController
   end
   
   private
-  def list_params
-    params.require(:list).permit(:title, :image, :body)
+  def user_params
+    params.require(:user).permit(:title, :body)
   end
     
 end
