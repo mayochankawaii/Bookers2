@@ -24,6 +24,8 @@
 	    <%= render 'users/newbook',book: @book %>
 	  </div>
 	  <div class='col-md-8 offset-md-1'>
+	    <!--ここまで部分テンプレート化予定-->
+
 	    <h2>Books</h2>
 	    <!-- 投稿した書籍一覧表示を作成しましょう。 -->
 	    <% @books.each do |book| %>
@@ -39,9 +41,9 @@
 	      </thead>
 	      <tbody>
 	      	<tr>
-			    <th><%= image_tag @user.get_profile_image(100,100) %></th>
-			    <th><%= link_to book.title,  book_path %></th>
-			    <th><%= book.body %></th>
+			    <td><%= image_tag @user.get_profile_image(100,100) %></td>
+			    <td><%= link_to book.title,  book_path %></td>
+			    <td><%= book.body %></td>
 			    </tr>
 			  </tbody>
 	    </table>
