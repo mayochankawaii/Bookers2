@@ -2,22 +2,23 @@
 	<div class='row'>
 	  <div class='col-md-3'>
 	    <h2>User info</h2>
-	    <!-- モックのため、固定値や未実装になっている部分があります。アプリ完成前に修正しましょう。 -->
 	    <table class='table'>
 	      <tr>
-	        <%= image_tag 'default-image.jpg' %>  <!-- 固定値になっているので変数を使いましょう -->
+	        <%= image_tag @user.get_profile_image(100,100) %>
 	      </tr>
 	      <tr>
 	        <th>name</th>
-	        <th>DMM太郎</th>  <!-- 固定値になっているので変数を使いましょう -->
+	        <th><%= @user.name %></th>
 	      </tr>
 	      <tr>
 	        <th>introduction</th>
-	        <th></th>  <!-- 固定値になっているので変数を使いましょう -->
+	        <th><%= @user.introduction %></th>
 	      </tr>
 	    </table>
 	    <div class='row'>
-	      <!-- 編集リンクが未実装 -->
+	      <%= link_to edit_user_path, class:"nav-link text-light" do %>
+          <i class="fa-solid fa-link"></i> 編集リンク
+        <% end %>
 	    </div>
 	    <h2 class="mt-3">New book</h2>
 	    <%= render 'users/newbook',book: @book %>
