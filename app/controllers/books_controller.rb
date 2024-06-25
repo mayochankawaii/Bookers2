@@ -39,7 +39,6 @@ class BooksController < ApplicationController
     flash[:notice] = "You have created book successfully."
     redirect_to book_path(@book.id)
     else
-    flash.now[:notice] = "投稿に失敗しました。"
     render :edit
     end
   end
