@@ -27,22 +27,21 @@
 	    <!--ここまで部分テンプレート化予定-->
 	    
 	    <h2>Book detail</h2>
-	    <!-- 投稿した書籍一覧表示を作成しましょう。 -->
 	    <% @books.each do |book| %>
-	      <div>
+	    <div>
 	    <table class='table table-hover table-inverse'>
 	      <tbody>
 	      	<tr>
 			    <td><%= image_tag @user.get_profile_image(100,100) %></td>
-			    <td><%= link_to book.title, book_path %></td>
+			    <td><%= link_to book.title, book_path(book) %></td>
 			    <td><%= book.body %></td>
 			    <td><%= link_to "Edit", edit_book_path %></td>
 			    <td><%= link_to "Destroy", book_path, method: :delete, "data-confirm" => "本当に消しますか？" %></td>
 			    </tr>
 			  </tbody>
 	    </table>
-			  </div>
-				 <% end %>
+		</div>
+		 <% end %>
 	  </div>
 	</div>
 </div>
