@@ -1,6 +1,7 @@
 <div>
   <%= flash[:notice] %>
 </div>
+
 <div class='container px-5 px-sm-0'>
 	<div class='row'>
 	  <div class='col-md-3'>
@@ -19,21 +20,21 @@
 	      </tr>
 	    </table>
 	    <div class='row'>
-	      <%= link_to edit_user_path(user), class:"nav-link text-light" do %>
-          <i class="fa-solid fa-link"></i> 編集リンク
+	      <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block" do %>
+          <i class="fas fa-user-cog"></i>
         <% end %>
 	    </div>
 	    <h2 class="mt-3">New book</h2>
 	    <!-- form_with部分 -->
 		<%= form_with model: Book.new do |f| %>
 		  <div class="field">
-		    <h4>Title</h4>
-		    <%= f.text_field :title %>
+		    <label>Title</label>
+		    <p><%= f.text_field :title %></p>
 		  </div>
 		  <div class="field">
-		    <h4>Opinion</h4>
-		    <%= f.text_area :body %>
+		    <label>Opinion</label>
+		    <p><%= f.text_area :body %></p>
 		  </div>
-		    <Div Align="left"><%= f.submit 'Create Book' %></Div>
+		    <Div Align="left"><%= f.submit 'Create Book', class: "btn btn-success" %></Div>
 		  <% end %>
 	  </div>
