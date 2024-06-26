@@ -11,16 +11,16 @@
   <div class = "row">
     <div class = "col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 
-<h2>User info</h2>
-<%= form_with model: @user do |f| %>
-  <label for="inputName">Name</label>
-  <p><%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"name"%></p>
-  <label for="inputImage">Image</label>
-  <p><%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %></p>
-  <label for="inputIntroduction">Introduction</label>
-  <p><%= f.text_field :introduction, autofocus: true, id:"inputIntroduction", placeholder:""%></p>
-  <%= f.submit "Update User", class: "btn btn-secondary" %>
-<% end %>
+      <h2>User info</h2>
+      <%= form_with model: @user do |f| %>
+        <label for="inputName">Name</label>
+          <p><%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"name"%></p>
+        <label for="inputImage">Image</label>
+          <p><%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %></p>
+        <label for="inputIntroduction">Introduction</label>
+          <p><%= f.text_field :introduction, autofocus: true, id:"inputIntroduction", placeholder:""%></p>
+        <%= f.submit "Update User", class: "btn btn-secondary" %>
+      <% end %>
 
     </div>
   </div>
